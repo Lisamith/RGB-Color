@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+		<link rel="stylesheet" href="main.css" type="text/css" />
+		<link rel="shortcut icon" sizes="196x196" href="icon-196x196.png">
+		<link rel="apple-touch-icon" href="touch-icon-iphone.png"/>
+		<link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png"/>
+		<link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone4.png"/>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta http-equiv="language" content="english, de">
+		<meta name="copyright" content="Lisamith 2014">
+		<meta name="robots" content="index,follow">
+		<meta name="keywords" content="RGB, Color, Chooser">
+		<meta name="description" content="With this neat little Web App you can choose RGB Color codes">
+		
+		<title>RGB Color</title>
+</head>
+<body onload="triggers();loadColors();loadSliders()" id="choser">
+<input type="checkbox" id="togglenav">
+<input type="checkbox" id="toggleinfo">
+<label id="info" for="toggleinfo"></label>
+<label id="save"></label>
+		<div id="header" class="slideoutnav">
+			<label for="togglenav">RGB Color</label>
+		</div>
+		<div id="menu" class="slideoutnav">
+			<span class="menuitem">
+				<p><a href="index.html">Color Chooser</a></p>
+			</span>
+			<span class="menuitem">
+				<p><a href="saved.html">Saved colors</a></p>
+			</span>
+		</div>
+	
+	<div id="content">
+	</div>
+		<div id="infobox">
+			<p id="headline">
+				Arithmetic color code
+			</p>
+			<p id="colorcode">
+			</p>
+		</div>
+		<div id="sliders">
+			<input type="range"  min="0" max="255" id="r_slider" value="112"/>
+			<input type="range"  min="0" max="255" id="g_slider" value="112"/>
+			<input type="range"  min="0" max="255" id="b_slider" value="112"/>
+		</div>
+	</div>
+		
+		
+		
+		
+</body>
+	<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript" src="triggers.js"></script>
+</html>

@@ -1,0 +1,229 @@
+@charset "utf-8";
+/* Generelle Eigenschaften */
+* {
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+html {
+	height:100%;
+}
+body {
+	width:100%;
+	height:100%;
+	font:14px Open Sans;
+	font-weight:400;
+	background-color: rgb(112,112,112);
+	overflow: hidden;
+}
+.slideoutnav {
+		position:absolute;
+		height:100%;
+		width:100%;
+		z-index: 499;
+}
+		#header {
+			top:0;
+			left:0;
+			background-color: rgba(0,0,0,.2);
+			border-bottom:3px solid rgba(0,0,0,.4);
+			color:white;
+			height:5%;
+			padding-left:0%;
+			padding-top:1%;
+			font-size:20px;
+			display:table-cell;
+			vertical-align:middle;
+			transition:background-position .5s ease-out;
+			transition:background-position .5s ease-out;
+			background-image:url(hamburger.png), url(save.png), url(info.png);
+			background-size:auto 50%, auto 50%, auto 50%;
+			background-position:2% center, 99% center, 89% center;
+			background-repeat:no-repeat;
+}
+	
+		#saved #header {
+			transition:background-position .5s ease-out;
+			background-image:url(hamburger.png);
+			background-size:auto 50%;
+			background-position:2% center;
+			background-repeat:no-repeat;
+		}
+		
+	input[type=checkbox] {
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:0;
+}
+	#togglenav:checked ~ #menu {
+	left:0%;
+}
+	#togglenav:checked ~ #content {
+	background-color:rgba(0,0,0,.5);
+}
+	#togglenav:checked ~ #header {
+		background-image: url(hamburger.png);
+}	
+	#togglenav:checked ~ #sliders {
+		visibility: hidden;
+		z-index: -1;
+}
+	
+	#togglenav:checked ~ .colorbox {
+		position: absolute;
+		visibility: hidden;
+		z-index: -1;
+	}
+
+	label[for=togglenav] {
+		padding-left: 9%;
+	}
+	
+	label[for=togglenav]:active {
+		background-color: rgba(0,0,0,.4);
+	}
+	
+	#save {
+		position: absolute;
+		left: 90%;
+		width: 10%;
+		height: 5%;
+		top: 0;
+		z-index: 500;
+	}
+	
+	#info {
+		position: absolute;
+		left: 80%;
+		width: 10%;
+		height: 5%;
+		top: 0;
+		z-index: 500;
+	}
+	
+	#toggleinfo:checked ~ #content {
+		z-index: -1;
+		background-color:rgba(0,0,0,.5);
+	}
+	
+	#toggleinfo:checked ~ #sliders{
+		z-index: -1;
+		visibility: hidden;
+	}
+	
+	#toggleinfo:checked ~ #infobox{
+		visibility: visible;
+	}
+	
+	#menu {
+			position:absolute;
+			top:6%;
+			left:-93%;
+			background-color:white;
+			height:95%;
+			width:70%;
+			transition:all 0.5s ease-out;
+			transition-property:left;
+}
+
+		.menuitem {
+			position: relative;
+			display: block;
+			width: 90%;
+			padding: 5%;
+		}
+		
+		p {
+			margin:5%;
+			font-size:18px;
+}
+
+		
+		p a {
+			color: black;
+			text-decoration: none;
+		}
+		
+		p a:active span {
+			background-color: #dadada;
+		}
+		
+		/*p a:hover {
+			background-color: #dadada;
+		}*/
+		
+		#content {
+			display: inline;
+			position:absolute;
+			top:6%;
+			height:95%;
+			left:0%;
+			width:100%;
+			transition:all 0.5s ease-out;
+			transition-property: background-color, z-index;
+}
+
+		.colorbox {
+			position: relative;
+			float: left;
+			width: 20%;
+			margin-left: 10%;
+			margin-top: 2%;
+			height: 10%;
+			border-bottom:3px solid rgba(0,0,0,.6);
+		}
+
+		#infobox {
+			position:absolute;
+			visibility: hidden;
+			background-color: white;
+			top: 40%;
+			height: 20%;
+			left: 15%;
+			width: 70%;
+			z-index: 500;
+		}
+		
+		#infobox #headline {
+			border-bottom: 3px solid rgb(112,112,112);
+			font-weight: 700;
+			font-size: 20px;
+		}	
+
+		#sliders {
+			position: absolute;
+			height: 50%;
+			width: 50%;
+			left: 25%;
+			top: 25%;
+			z-index: 300;
+		}
+		
+	input[type='range'] {
+		-webkit-appearance: none;
+		background-color: white;
+		width: 100%;
+		height: 5px;
+		vertical-align: middle;
+		margin-top: 30%;
+	}
+		
+	input[type='range']::-webkit-slider-thumb {
+		-webkit-appearance: none !important;
+		background-color: white;
+		border: 1px solid #999;
+		height: 40px;
+		width: 15px;
+	}
+	
+	
+	/* Delete that shit later */
+	input[type='button'] {
+		position: absolute;
+		top: 90%;
+		left: 10%;
+		width: 90%;
+		height: 5%;
+	}
+	/* TODO: Don't forget Mozilla implementation */
